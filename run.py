@@ -15,7 +15,7 @@ def main():
     global word
     global guessed
     global length
-    global play_game
+    global play
     words = ["freedom", "rights", "humanity", "democracy", "tolerance", 
     "liberty", "equality", "justice", "honesty", "integrity", "fairness", 
     "probity", "uprightness", "rectitude", "sincerity", "commonwealth", 
@@ -25,9 +25,19 @@ def main():
     count = 0
     display = "_"*length
     guessed = []
-    play_game = ""
+    play = ""
+    
+# Restart game
 
-
-
+def onceagain ():
+    global play
+    play = input("Play again? Y = yes, N = no \n")
+    while play not in ["Y", "y", "N", "n"]:
+        play = input("Play again? Y = yes, N = no \n"")
+    if play ==  "y":
+        main()
+    elif play == "n":
+        print("Thank you! See you again.")
+        exit()    
 
 
