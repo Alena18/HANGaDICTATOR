@@ -3,7 +3,11 @@ import time
 # invitation to a game
 print("\nWelcome to HANGaDICTATOR game by coffeebeanstudio1809@gmail.com")
 name = input("Enter your name:")
-print("Hello, " + name + "! Best of Luck!")
+if name.isalpha() == True:
+    print("Hello, " + name + "! Best of Luck!")
+else:
+    print("Please, enter a name.")          
+
 time.sleep(3)
 print("The game is about to start!\nEnjoy!")
 time.sleep(3)
