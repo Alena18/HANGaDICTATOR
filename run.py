@@ -2,15 +2,21 @@ import random
 import time
 # invitation to a game
 print("\nWelcome to HANGaDICTATOR game by coffeebeanstudio1809@gmail.com")
-name = input("Enter your name:")
-if name.isalpha() == True:
-    print("Hello, " + name + "! Best of Luck!")
-else:
-    print("Please, enter a name.")          
+def getName():
+    name = input("Enter your name: ")
+    text = input("Name that you entered is not valid. Please, enter your name: ")
+    return text
+def nameText():
+    while(True):
+        textName = getName()
+        if textName.isalpha():
+            break
+    print("Hello, " + textName + "! Best of Luck!")
 
-time.sleep(3)
+nameText()
+time.sleep(1)
 print("The game is about to start!\nEnjoy!")
-time.sleep(3)
+time.sleep(2)
 # game
 # define variable
 def main():
