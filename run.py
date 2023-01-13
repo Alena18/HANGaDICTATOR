@@ -2,16 +2,23 @@ import random
 import time
 # invitation to a game
 print("\nWelcome to HANGaDICTATOR game by coffeebeanstudio1809@gmail.com")
+# name = input("Enter your name:")
+# if name.isalpha():
+#     print("Hello, " + name.capitalize() + "! Best of Luck!")
+#     # break out of the loop now
+# else:
+#     print(f"{name} is not valid. Please try again.")
 def getName():
     name = input("Enter your name: ")
-    text = input("Name that you entered is not valid. Please, enter your name: ")
-    return text
+    return name
+
 def nameText():
     while(True):
+        print("The name you entered is not valid. Please enter your name.")
         textName = getName()
         if textName.isalpha():
             break
-    print("Hello, " + textName + "! Best of Luck!")
+    print("Hello, " + textName.capitalize() + "! Best of Luck!")
 
 nameText()
 time.sleep(1)
