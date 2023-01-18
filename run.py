@@ -1,5 +1,5 @@
 import random
-import time
+
 # invitation to a game
 print("\nWelcome to HANGaDICTATOR game by coffeebeanstudio1809@gmail.com")
 # Enter player name
@@ -48,6 +48,10 @@ def main():
     while total_guess !=0:
         print(guessed)
         guess = input("Enter the HANGaDICTATOR word letter: \n").upper()
+        # Check if a letter that entered is a letter 
+        if len(guess.strip()) == 0 or len(guess.strip()) > 1 or not guess.isalpha():
+              print("Try a letter\n ")
+              continue
         if guess in word:
             for index in range(len(word)):
                 if word[index]==guess:
