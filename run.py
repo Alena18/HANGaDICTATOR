@@ -14,10 +14,11 @@ def getName():
 
 def nameText():
     while(True):
-        print("The name you entered is not valid. Please enter your name.")
         textName = getName()
         if textName.isalpha():
             break
+        else:
+            print("The name that you entered is not valid. Please try again.")
     print("Hello, " + textName.capitalize() + "! Best of Luck!")
 
 nameText()
