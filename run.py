@@ -2,100 +2,100 @@ import random
 import time
 # invitation to a game
 print("\nWelcome to HANGaDICTATOR game by coffeebeanstudio1809@gmail.com")
-# name = input("Enter your name:")
-# if name.isalpha():
-#     print("Hello, " + name.capitalize() + "! Best of Luck!")
-#     # break out of the loop now
-# else:
-#     print(f"{name} is not valid. Please try again.")
-def getName():
-    name = input("Enter your name: ")
-    return name
+# Enter player name
+# def getName():
+#     name = input("Enter your name: ")
+#     return name
 
-def nameText():
-    while(True):
-        textName = getName()
-        if textName.isalpha():
-            break
-        else:
-            print("The name that you entered is not valid. Please try again.")
-    print("Hello, " + textName.capitalize() + "! Best of Luck!")
+# def nameText():
+#     while(True):
+#         textName = getName()
+#         if textName.isalpha():
+#             break
+#         else:
+#             print(f"{textName} is not valid. Pease try aglain.")
+#     print("Hello, " + textName.capitalize() + "! Best of Luck!")
+# nameText()
+# Restart game
+def onceagain():
+    global play
+    play = input("\nPlay again? Y = yes, N = no \n")
+    while play not in ["Y", "y", "N", "n"]:
+        play = input("Please enter 'Y' for 'yes', 'N' for 'no' \n")
+    if play in ["Y", "y"]:
+        main()
+    elif play in ["N", "n"]:
+        print("Thank you! Hope you enjoyed the game.")
+        exit()    
 
-nameText()
-time.sleep(1)
-print("The game is about to start!\nEnjoy!")
-time.sleep(2)
+
+# Game start
+# time.sleep(1)
+# print("The game is about to start!\nEnjoy!")
+# time.sleep(2)
 # game
 # define variable
 def main():
-    global count
-    global display
-    global word
-    global guessed
-    global length
-    global play
-    words = ["freedom", "rights", "humanity", "democracy", "tolerance", 
-    "liberty", "equality", "justice", "honesty", "integrity", "fairness", 
-    "probity", "uprightness", "rectitude", "sincerity", "commonwealth", 
-    "emancipation","suffrage","election", "minority"]
+    words = ["commonwealth"] #, 'democracy','election', 'emancipation',
+    # 'equality', 'fairness', 'freedom', 'honesty', 'humanity',
+    # 'integrity', 'justice', 'liberty', 'minority', 'probity',
+    # 'rectitude', 'rights', 'sincerity', 'suffrage', 'tolerance',
+    # 'uprightness']
     word = random.choice(words)
-    length = len(word)
-    count = 0
-    display = "_"*length
-    guessed = []
-    play = ""
-    
-# Restart game
+    word = word.upper()
+    total_guess = 7
+    guessed = "-"*len(word)
+    while total_guess !=0:
+        print(guessed)
+        guess = input("Enter the HANGaDICTATOR word letter: \n").upper()
+        if guess in word:
+            for index in range(len(word)):
+                if word[index]==guess:
+                    guessed = guessed[:index]+guess+guessed[index+1:]
+            if guessed == word:
+                print(f"Your guessed word: {word}. Well done!!!")
+                onceagain()
+        else:
+            total_guess -= 1
+            print("Wrong guess.\n")
+            print("The attempt(s) left: ", total_guess)
 
-def onceagain ():
-    global play
-    play = input("Play again? Y = yes, N = no \n")
-    while play not in ["Y", "y", "N", "n"]:
-        play = input("Play again? Y = yes, N = no \n")
-    if play ==  "y":
-        main()
-    elif play == "n":
-        print("Thank you! See you again.")
-        exit()    
+    else:
+        print("\nYou loose.\n")
+        print("The correct word is ", word)
+        onceagain()
+main()  
 
 # Play game
-def hang():
-     guess = input("Enter the HANGaDICTATOR word:" + display + "\n" )
-     guess = guess.strip()
-     if len(guess.strip()) == 0 or len(guess.strip()) > 1 or not guess.isalpha():
-            print("Try a letter\n ")
-            hang()
-     elif guess in word:
-          guessed.extend([guess])
-          index = word.lower(guess)
-          word = word[:index] + "_" + word[index + 1:]
-          print(display + "\n")
-     elif guess in guessed:
-          print("Try another letter.\n")
-     else:
-          count +=1
-          if count == 1:
-             time.sleep(1)
-             print("    _________\n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"
-                   "   |      \n"    
-                   "___|___   \n"          
-                 )
-main()
+# def hang():
+#      guess = input("Enter the HANGaDICTATOR word:" + display + "\n" )
+#      guess = guess.strip()
+#      if len(guess.strip()) == 0 or len(guess.strip()) > 1 or not guess.isalpha():
+#             print("Try a letter\n ")
+#             hang()
+#      elif guess in word:
+#           guessed.extend([guess])
+#           index = word.lower(guess)
+#           word = word[:index] + "_" + word[index + 1:]
+#           print(display + "\n")
+#      elif guess in guessed:
+#           print("Try another letter.\n")
+#      else:
+#           count +=1
+#           if count == 1:
+#              time.sleep(1)
+#              print("    _________\n"
+#                    "   |      \n"
+#                    "   |      \n"
+#                    "   |      \n"
+#                    "   |      \n"
+#                    "   |      \n"
+#                    "   |      \n"
+#                    "___|___   \n"          
+#                  )
+# main()
 
-hang()
+# hang()
 
 
 
