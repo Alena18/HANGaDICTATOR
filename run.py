@@ -63,7 +63,7 @@ def main():
             if guessed == word:
                 print(f"Your guessed word: {word}. Well done!!!")
                 time.sleep(1)
-                print("Your dictator is hanged!")
+                print("The dictator is hanged!")
                 time.sleep(1)
                 print("    ______\n"
                       "   |      |\n"
