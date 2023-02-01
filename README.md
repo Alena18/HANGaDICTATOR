@@ -278,8 +278,8 @@ Any remaining open issues can be tracked [here](https://github.com/Alena18/HANGa
 
 | Bug | Status |
 | --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/Alena18/HANGaDICTATOR/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/Alena18/HANGaDICTATOR/issues/5) | Open |
+| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/Alena18/HANGaDICTATOR/issues/4) | Closed |
+| [Python `E501 line too long` (93 > 79 characters)](https://github.com/Alena18/HANGaDICTATOR/issues/5) | Closed |
 
 ## Unfixed Bugs
 
