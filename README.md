@@ -1,16 +1,9 @@
 # HANGaDICTATOR by coffeebeanstudio1809@gmail.com
 The live link can be found [here](https://hang-a-dictator.herokuapp.com/)
-README.md 
-# HANGADICTATOR
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+# HANGaDICTATOR
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
+HANGaDICTATOR python game is equivalent to hangman game except the player needs to guess a word by guessing a letter in it to hang a man (dictator), if the word is not guessed the player has lost and the dictator escape.
 Consider adding a mockup image using the "Am I Responsive" website.
 Here's your deployed site as an example:
 https://ui.dev/amiresponsive?url=https://hang-a-dictator.herokuapp.com

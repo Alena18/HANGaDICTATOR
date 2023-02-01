@@ -18,7 +18,7 @@ def nameText():
             break
         # If name contains not a letter
         else:
-            print(f"{textName} is not valid. Pease try aglain.")
+            print(f"{textName} is not valid. Pease try again.")
     print("Hello, " + textName.capitalize() + "! Best of Luck!")
 
 
