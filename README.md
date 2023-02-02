@@ -20,25 +20,27 @@ HANGaDICTATOR python game is an equivalent to hangman game except the player nee
 
     - After entering the name, the game will start. The words that were used in the game are nouns that opposite to the dictator regime. Every new game will give a different word to guess. The player should guess a word by entering a letter. The player has six attempts to enter a wrong letter. The game has been lost and over if all six attempts are fail. 
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/wrongguess.png)
+![screenshot](documentation/lost.png)
 
 - **Feature #3**
 
     - The player can't enter number or more than one letter at once.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/tryaletter.png)
 
 - **Feature #4**
 
     - If the player guessed the word the game is over and the dictator is hung.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/guessed.png)
 
 - **Feature #5**
 
-    - When the game is over, the sentence appears inviting the player to play again or to leave the game.
+    - When the game is over, the sentence appears inviting the player to play again or to leave the game. The player can enter only Y for Yes or N for no. "Y" or "y" - the game will execute again and to exit the game the player types "N" or "n". 
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/yn.png)
+![screenshot](documentation/no.png)
 
 ### Future Features
 
@@ -231,11 +233,12 @@ return HttpResponse(
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
-| Blog views.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/whitespace.png) | W291 trailing whitespace |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/blanklines.png) | E305 expected 2 blank lines after class or function definition, found 0 |
+| settings.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/boutique-ado/settings.py) | ![screenshot](documentation/linetoolong.png) | E501 line too long |
+| Blog views.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/blog/views.py) | ![screenshot](documentation/views.png) | Pass: No Errors |
+| Checkout urls.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/checkout/urls.py) | ![screenshot](documentation/nonewline.png) | W292 no newline at end of file |
+| Profiles models.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/profiles/models.py) | ![screenshot](documentation/modelspy.png) | Pass: No Errors |
 
 
 ## Defensive Programming
