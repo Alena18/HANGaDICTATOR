@@ -40,7 +40,7 @@ HANGaDICTATOR python game is an equivalent to hangman game except the player nee
     - When the game is over, the sentence appears inviting the player to play again or to leave the game. The player can enter only Y for Yes or N for no. "Y" or "y" - the game will execute again and to exit the game the player types "N" or "n". 
 
 ![screenshot](documentation/yn.png)
-![screenshot](documentation/no.png)
+![screenshot](documentation/exit.png)
 
 ### Future Features
 
