@@ -42,6 +42,18 @@ HANGaDICTATOR python game is an equivalent to hangman game except the player nee
 ![screenshot](documentation/yn.png)
 ![screenshot](documentation/exit.png)
 
+- **Feature #6**
+
+    - For replayability the word is always randomized from a list of 20 words. 
+
+![screenshot](documentation/words.png)
+
+- **Feature #7**
+
+    - Used a clear screen function. 
+
+![screenshot](documentation/words.png)
+
 ### Future Features
 
 Implement a timer to stop a game to make it more difficult.
@@ -61,8 +73,6 @@ Implement a timer to stop a game to make it more difficult.
 
 ### Classes & Functions
 
-```python
-```
 Parameters:
 name
 textName
@@ -91,10 +101,7 @@ I've used the following Python packages and/or external imported packages.
 
 - `time`: used for adding time delays
 - `random`: used to get a random choice from a list
-
-## Testing
-
-Test was done in heroku app and gitpod during writing a code. The game working without any issue.
+- `os`: used to clear an operating system screen
 
 ## Deployment
 
@@ -191,11 +198,13 @@ I used help of my tutor [Tim Nelson](https://github.com/TravelTim) from CodeInst
 
 ### Acknowledgements
 
-
-- I would like to thank my Code Institute tutor, [Tim Nelson](https://github.com/username) for their support throughout the development of this project.
+- I would like to thank my Code Institute tutor, [Tim Nelson](https://github.com/TravelTim) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 
+## Testing
+
+Test was done in heroku app and gitpod during writing a code. The game working without any issue.
 
 ## Code Validation
 
@@ -203,86 +212,28 @@ I used help of my tutor [Tim Nelson](https://github.com/TravelTim) from CodeInst
 
 I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-[CI Python Linter Screenshot](documentation/feature03.png)
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Examples:
-
-    | File | CI URL | Raw URL | Combined |
-    | --- | --- | --- | --- |
-    | PP3 *run.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py` | `https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py` |
-    | Boutique Ado *settings.py* | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/Alena18/hangadictator/main/boutique_ado/settings.py` | `https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/boutique_ado/settings.py` |
-
-It's recommended to validate each file using the API URL.
-This will give you a custom URL which you can use on your testing documentation.
-It makes it easier to return back to a file to validate it again in the future.
-Use the steps above to generate your own custom URLs for each Python file.
-
-```python
-return HttpResponse(
-    content=(
-        f'Webhook received: {event["type"]} | '
-        'SUCCESS: Verified order already in database'),
-    status=200)
-```
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/whitespace.png) | W291 trailing whitespace |
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/blanklines.png) | E305 expected 2 blank lines after class or function definition, found 0 |
-| settings.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/boutique-ado/settings.py) | ![screenshot](documentation/linetoolong.png) | E501 line too long |
-| Blog views.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/blog/views.py) | ![screenshot](documentation/views.png) | Pass: No Errors |
-| Checkout urls.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/checkout/urls.py) | ![screenshot](documentation/nonewline.png) | W292 no newline at end of file |
-| Profiles models.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/profiles/models.py) | ![screenshot](documentation/modelspy.png) | Pass: No Errors |
-
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/linetoolong.png) | E501 line too long |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Alena18/hangadictator/main/run.py) | ![screenshot](documentation/views.png) | Pass: No Errors |
 
 ## Defensive Programming
 
 - Users must enter a valid letter when prompted
-- Users must choose from a specific list only.
 
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
+    - ![screenshot](documentation/tryaletter.png)
 
-### GitHub **Issues**
+- Users must choose from a "yes" or "no" from replay.
 
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/Alena18/HANGaDICTATOR/issues
+    - ![screenshot](documentation/yn.png)
 
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
+- User should enter a valid name with alpha character and at least more then one character.
 
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
+    - ![screenshot](documentation/validname.png)
 
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-**Fixed Bugs**
-
-All previously closed/fixed bugs can be tracked [here](https://github.com/Alena18/HANGaDICTATOR/issues?q=is%3Aissue+is%3Aclosed).
-
-| Bug | Status |
-| --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/Alena18/HANGaDICTATOR/issues/1) | Closed |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/Alena18/HANGaDICTATOR/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/Alena18/HANGaDICTATOR/issues/3) | Closed |
-
-**Open Issues**
-
-Any remaining open issues can be tracked [here](https://github.com/Alena18/HANGaDICTATOR/issues).
-
-| Bug | Status |
-| --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/Alena18/HANGaDICTATOR/issues/4) | Closed |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/Alena18/HANGaDICTATOR/issues/5) | Closed |
 
 ## Unfixed Bugs
 
