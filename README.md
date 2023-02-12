@@ -47,7 +47,7 @@ HANGaDICTATOR python game is an equivalent to hangman game except the player nee
 
 - **Feature #6**
 
-    - For replayability the word is always randomized from a list of 20 words. 
+    - For replayability the word is always randomised from a list of 20 words. 
 
 ![screenshot](documentation/words.png)
 

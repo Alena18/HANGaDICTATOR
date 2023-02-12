@@ -10,7 +10,7 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 
-# invitation to a game
+# Invitation to a game
 clear()
 print("\nWelcome to HANGaDICTATOR game by coffeebeanstudio1809@gmail.com")
 
