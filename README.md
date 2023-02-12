@@ -4,6 +4,9 @@ The live link can be found [here](https://hang-a-dictator.herokuapp.com/)
 # HANGaDICTATOR
 HANGaDICTATOR is a game build using a python.
 
+# Flowchart
+
+![screenshot](documentation/hangadictatorflowchart.jpg)
 
 ## Features
 HANGaDICTATOR python game is an equivalent to hangman game except the player needs to guess a word by guessing a letter in it to hang a man (dictator), if the word is not guessed the player has lost and the dictator escape.
