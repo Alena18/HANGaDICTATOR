@@ -1,5 +1,5 @@
 # HANGaDICTATOR by coffeebeanstudio1809@gmail.com
-The live link can be found [here](https://hang-a-dictator.herokuapp.com/)
+The live link can be found [here](https://hangadictator.onrender.com)
 
 # HANGaDICTATOR
 HANGaDICTATOR is a game build using a python.
